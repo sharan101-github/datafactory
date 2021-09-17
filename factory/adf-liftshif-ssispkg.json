@@ -1,0 +1,9 @@
+{
+	"name": "adf-liftshif-ssispkg",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "27a55a0b-a486-418f-86d7-f49fefa72979",
+		"tenantId": "72f6bc8d-3e7c-45b9-a24d-c1c947aa6e50"
+	}
+}

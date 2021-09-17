@@ -1,0 +1,34 @@
+{
+	"name": "email_webactivity",
+	"properties": {
+		"activities": [
+			{
+				"name": "email",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"url": "https://prod-05.northcentralus.logic.azure.com:443/workflows/ae44796e20244535aacdc6999f90ab20/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=5zDnRZQCo4tuwXkkmACDV3ibtq5bKVrU7clwcPtzdNU",
+					"method": "POST",
+					"body": {
+						"DataFactoryName": "@{pipeline().DataFactory}",
+						"PipelineName": "@{pipeline().Pipeline}",
+						"Subject": "An error has occurred!",
+						"ErrorMessage": "The ADF pipeline has crashed! Please check the logs.",
+						"EmailTo": "sharan.bfsi@gmail.com"
+					}
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2021-09-17T12:18:01Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
